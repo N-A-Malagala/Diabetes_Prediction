@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 05px;
+            background-color: #f4f4f9;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        input[type="text"] {
+            width: 95%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        /* Hover effect for the submit button */
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+            /* Slight zoom effect on hover */
+        }
+        /* Focus effect for the submit button */
+        
+        input[type="submit"]:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.6);
+        }
+        
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 7px;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 3px 0;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+        
+        .form-group input[type="date"] {
+            width: 95%;
+            padding: 8px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+        /* Focus effect on the input field */
+        
+        .form-group input[type="date"]:focus {
+            border-color: #4CAF50;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.6);
+            outline: none;
+        }
+        /* Placeholder style */
+        
+        .form-group input[type="date"]::placeholder {
+            color: #aaa;
+        }
+        /* Style for the hover effect */
+        
+        .form-group input[type="date"]:hover {
+            border-color: #66bb6a;
+        }
+        /* Style for the form group */
+        /*********************/
+        /* Style for the form group */
+        
+        .form-group {
+            margin-bottom: 25px;
+            font-family: 'Arial', sans-serif;
+        }
+        /* Style for the main label */
+        
+        .form-group label {
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+        /* Style for the radio button container */
+        
+        .radio-group {
+            display: flex;
+            gap: 30px;
+            /* Space between radio options */
+            align-items: center;
+        }
+        /* Style for individual radio labels */
+        
+        .radio-label {
+            font-size: 18px;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        /* Custom radio button styling */
+        
+        input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #4CAF50;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        input[type="radio"]:checked {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        /* Inner circle when checked */
+        
+        input[type="radio"]:checked::after {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        /* Hover effect for radio buttons */
+        
+        input[type="radio"]:hover {
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+        }
+        /* Focus effect for radio buttons */
+        
+        input[type="radio"]:focus {
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.8);
+            border-color: #66bb6a;
+        }
+        /* Style for text next to radio button */
+        
+        .radio-label {
+            font-size: 16px;
+            color: #555;
+            display: inline-flex;
+            gap: 10px;
+        }
+        /* Stylish hover effect for the label */
+        
+        .radio-label:hover {
+            color: #4CAF50;
+            transform: translateY(-2px);
+            transition: transform 0.2s, color 0.2s;
+        }
+        /* Optional effect when clicked */
+        
+        input[type="radio"]:active {
+            transform: scale(1.1);
+            transition: transform 0.1s;
+        }
+        /* Style for the form group */
+        
+        .form-group {
+            margin-bottom: 5px;
+            font-family: 'Arial', sans-serif;
+        }
+        /* Style for the label */
+        
+        .form-group label {
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        /* Style for the input field */
+        
+        input[type="text"] {
+            width: 90%;
+            padding: 12px 18px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+        /* Focus effect for the input field */
+        
+        input[type="text"]:focus {
+            border-color: #4CAF50;
+            background-color: #eaffea;
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+        }
+        /* Placeholder styling */
+        
+        input[type="text"]::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+        /* Hover effect for the input field */
+        
+        input[type="text"]:hover {
+            border-color: #66bb6a;
+        }
+        /* Active effect for the input field */
+        
+        input[type="text"]:active {
+            transform: scale(1.02);
+            transition: transform 0.1s;
+        }
+        
+        h3 {
+            font-size: 20px;
+            color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Diabetes Prediction</h1>
+    </header>
+    <form action="/" method="POST">
+        <div class="form-group">
+            <label for="age">Date of Birth :</label>
+            <input type="date" name="dob" placeholder="" required>
+        </div>
+        <div class="form-group">
+            <label>Hypertension :</label>
+            <label>
+                &emsp;&emsp;&emsp;<input type="radio" name="hypertension" value="1" required> Yes
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="radio" name="hypertension" value="0" required> No
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Heart Disease :</label>
+            <label>
+                &emsp;&emsp;&emsp;<input type="radio" name="heart_disease" value="1" required> Yes
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="radio" name="heart_disease" value="0" required> No
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="bmi">Weight : &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Height :</label>
+            <div style="display: flex; gap: 10px;">
+                <input type="text" name="weight" placeholder="Enter weight in kg" required>
+                <input type="text" name="height" placeholder="Enter height in cm" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="HbA1c_level">HbA1c level :</label>
+            <input type="text" name="HbA1c_level" placeholder="Enter HbA1c_level" required>
+        </div>
+        <div class="form-group">
+            <label for="blood_glucose_level">Blood Glucose Level :</label>
+            <input type="text" name="blood_glucose_level" placeholder="Enter Blood Glucose Level" required>
+        </div>
+        <input type="submit" value="Submit"> {% if result %}
+        <h3>Prediction Result: {{ result }}</h3>
+        {% endif %}
+    </form>
+
+    <footer>
+        <p>&copy; 2024 My Flask App. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
